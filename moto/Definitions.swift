@@ -1,0 +1,225 @@
+import UIKit
+
+// global tapped motorcycle id
+var tappedMotorcycleID: Int64 = 0
+var nrOfMostRecentMotorcycles: Int = 0
+
+// Colors
+let lightGrey = #colorLiteral(red: 0.9921568627, green: 0.9921568627, blue: 0.9921568627, alpha: 1)
+let middleGrey = #colorLiteral(red: 0.9411764706, green: 0.9411764706, blue: 0.9411764706, alpha: 1)
+let darkGrey = #colorLiteral(red: 0.8509803922, green: 0.8509803922, blue: 0.8509803922, alpha: 1)
+let lightRed = #colorLiteral(red: 0.9960784314, green: 0.231372549, blue: 0.1882352941, alpha: 1)
+let darkRed = #colorLiteral(red: 0.3058823529, green: 0.01960784314, blue: 0, alpha: 1)
+let darkBlue = #colorLiteral(red: 0.1058823529, green: 0.1215686275, blue: 0.1607843137, alpha: 1)
+
+// TabBar
+let def_tabBarMotorcycleIcon = #imageLiteral(resourceName: "motorcycle")
+let def_tabBarDetectIcon = #imageLiteral(resourceName: "detect")
+let def_tabBarDetailsIcon = #imageLiteral(resourceName: "details")
+let def_tabBarBackgroundColor = lightGrey
+let def_tabBarSelectedColor = lightRed
+let def_tabBarUnselectedColor = darkBlue
+
+// TermsAndConditions ViewController
+let def_termsAndConditionsVCBackgroundColor = lightGrey
+let def_termsAndConditionsVCViewWidth: CGFloat = 260.0
+let def_termsAndConditionsVCImage = #imageLiteral(resourceName: "startIcon")
+let def_termsAndConditionsVCImageHeight: CGFloat = 200.0
+let def_termsAndConditionsVCImageOffset: CGFloat = 64.0
+let def_termsAndConditionsVCTitleLabelFontSize: CGFloat = 22.0
+let def_termsAndConditionsVCTitleLabelFontColor = darkBlue
+let def_termsAndConditionsVCTitleLabelOffset: CGFloat = 50.0
+let def_termsAndConditionsVCDescriptionTextFontSize: CGFloat = 12.0
+let def_termsAndConditionsVCDescriptionTextFontColor = darkBlue
+let def_termsAndConditionsVCDescriptionTextOffset: CGFloat = 10.0
+let def_termsAndConditionsVCDescriptionTextMinHeight: CGFloat = 40.0
+let def_termsAndConditionsVCStartButton = #imageLiteral(resourceName: "searchButton")
+let def_termsAndConditionsVCStartButtonFontSize: CGFloat = 20.0
+let def_termsAndConditionsVCStartButtonFontColor = lightRed
+let def_termsAndConditionsVCStartButtonOffset: CGFloat = 50.0
+let def_termsAndConditionsVCStartButtonHeight: CGFloat = 50.0
+let def_termsAndConditionsVCCloseIcon = #imageLiteral(resourceName: "closeIcon")
+let def_termsAndConditionsVCCloseIconWidthHeight: CGFloat = 18.0
+let def_termsAndConditionsVCCloseIconPaddingTop: CGFloat = 22.0
+let def_termsAndConditionsVCCloseIconPaddingLeft: CGFloat = 30.0
+let def_termsAndConditionsVCCloseButtonWidthHeight: CGFloat = 40.0
+let def_termsAndConditionsVCCloseButtonPaddingTop: CGFloat = 10.0
+let def_termsAndConditionsVCCloseButtonPaddingLeft: CGFloat = 20.0
+let def_termsAndConditionsVCSearchCellSeperator = #imageLiteral(resourceName: "searchCellSeperator")
+let def_termsAndConditionsVCSeachCellSeperatorPaddingTop: CGFloat = 12.0
+let def_termsAndConditionsVCSeachCellSeperatorHeight: CGFloat = 1.0
+let def_termsAndConditionsVCRequestTimeout: Double = 30.0
+
+// Motorcycle ViewController
+let def_motorcycleVCFirstTimeViewWidth: CGFloat = 220.0
+let def_motorcycleVCFirstTimeLabelOffset: CGFloat = 200.0
+let def_motorcycleVCFirstTimeLabelFontSize: CGFloat = 22.0
+let def_motorcycleVCFirstTimeLabelFontColor = lightRed
+let def_motorcycleVCFirstTimeImage = #imageLiteral(resourceName: "startIcon")
+let def_motorcycleVCFirstTimeImageHeight: CGFloat = 200.0
+let def_motorcycleVCFirstTimeImageOffset: CGFloat = 50.0
+let def_motorcycleVCFirstTimeButtons = #imageLiteral(resourceName: "searchButton")
+let def_motorcycleVCFirstTimeButtonsHeight: CGFloat = 50.0
+let def_motorcycleVCFirstTimeButtonsFontSize: CGFloat = 20.0
+let def_motorcycleVCFirstTimeSearchButtonOffset: CGFloat = 110.0
+let def_motorcycleVCFirstTimeDetectButtonOffset: CGFloat = 180.0
+let def_motorcycleVCBackgroundColor = lightGrey
+let def_motorcycleVCSearchButtonImage = #imageLiteral(resourceName: "searchBar")
+let def_motorcycleVCSearchButtonImageTapped = #imageLiteral(resourceName: "searchBarTapped")
+let def_motorcycleVCSearchButtonShadowColor = darkBlue
+let def_motorcycleVCSearchButtonShadowRadius: CGFloat = 10.0
+let def_motorcycleVCSearchButtonShadowOpacity: Float = 0.1
+let def_motorcycleVCSearchButtonPaddingLR: CGFloat = 10.0
+let def_motorcycleVCSearchButtonMaxHeight: CGFloat = 110.0
+let def_motorcycleVCMostRecentLabelFontSize: CGFloat = 20.0
+let def_motorcycleVCMostRecentLabelPaddingTop: CGFloat = -10.0
+let def_motorcycleVCMostRecentLabelPaddingBottom: CGFloat = 10.0
+let def_motorcycleVCMostRecentLabelMaxHeight: CGFloat = 50.0
+let def_motorcycleVCTableViewPaddingLR: CGFloat = 10.0
+let def_motorcycleVCTableViewPaddingTop: CGFloat = 0.0
+let def_motorcycleVCTopBackgroundOffset: CGFloat = 20.0
+let def_mostRecentPersistentDataKey = "motorcycles"
+let def_mostRecentMaxCellCount: Int = 3
+let def_mostRecentCellHeight: CGFloat = 200.0
+let def_mostRecentCellNameBarHeight: CGFloat = 35.0
+let def_mostRecentCellNameBarGradientHeight: CGFloat = 10.0
+let def_mostRecentCellNameBarColor = lightGrey
+let def_mostRecentCellNameBarImage = #imageLiteral(resourceName: "nameBarBackground")
+let def_mostRecentCellSpacing: CGFloat = 10.0
+let def_mostRecentPlaceholder = #imageLiteral(resourceName: "mostRecentPlaceholder")
+let def_mostRecentCellCornerRadius: CGFloat = 6.0
+let def_mostRecentCellOverlayColor = darkBlue.withAlphaComponent(0.7)
+let def_mostRecentCellLabelCenterOffset: CGFloat = 2.0
+let def_mostRecentCellMotorcycleBrandLabelPaddingLR: CGFloat = 20.0
+let def_mostRecentCellMotorcycleBrandLabelOffset: CGFloat = 12.0
+let def_mostRecentCellMotorcycleBrandLabelMinimumScaleFactor: CGFloat = 0.75
+let def_mostRecentCellMotorcycleBrandLabelColor = lightRed
+let def_mostRecentCellMotorcycleBrandLabelFontSize: CGFloat = 18.0
+let def_mostRecentCellMotorcycleModelLabelPaddingLR: CGFloat = 6.0
+let def_mostRecentCellMotorcycleModelLabelColor = darkBlue
+let def_mostRecentCellDateLabelFontSize: CGFloat = 14.0
+let def_mostRecentCellDateLabelMinWidth: CGFloat = 30.0
+
+// Detect ViewController
+let def_detectVCBackgroundColor = lightGrey
+let def_detectVCButtonImage = #imageLiteral(resourceName: "detectButton")
+let def_detectVCButtonHeight: CGFloat = 60.0
+let def_detectVCButtonBottomMargin: CGFloat = 40.0
+let def_detectVCButtonInbetweenMargin: CGFloat = 20.0
+let def_detectVCButtonLeadingAndTrailingMargin: CGFloat = 10.0
+let def_detectVCConfidenceThreshhold: Float = 0.75;
+let def_detectVCProbablilityThreshhold = 3;
+let def_detectVCNoMotorcycle = "NO_MOTORCYCLE"
+let def_detectVCNoPermissionLabelFontSize: CGFloat = 18.0
+let def_detectVCNoPermissionLabelFontColor = darkBlue
+let def_detectVCNoPermissionLabelPaddingLR: CGFloat = 80.0
+let def_detectVCNoPermissionLabelOffset: CGFloat = 40.0
+let def_detectVCNoPermissionButton = #imageLiteral(resourceName: "searchButton")
+let def_detectVCNoPermissionButtonFontSize: CGFloat = 20.0
+let def_detectVCNoPermissionButtonFontColor = lightRed
+let def_detectVCNoPermissionButtonOffset: CGFloat = 40.0
+let def_detectVCNoPermissionButtonWidth: CGFloat = 220.0
+let def_detectVCNoPermissionButtonHeight: CGFloat = 50.0
+
+// Details ViewController
+let def_detailsVCTopBarImage = #imageLiteral(resourceName: "detailsTopBar")
+let def_detailsVCTopBarSettingsIcon = #imageLiteral(resourceName: "gearIcon")
+let def_detailsVCTopBarInfoIconWidth: CGFloat = 30.0
+let def_detailsVCTopBarInfoIconPaddingR: CGFloat = 24.0
+let def_detailsVCTopBarHeight: CGFloat = 125.0
+let def_detailsVCTopBarOffset: CGFloat = 40.0
+let def_detailsVCTopBarHeaderColor = UIColor.white
+let def_detailsVCMotorcycleLabelFontSize: CGFloat = 20.0
+let def_detailsVCMotorcycleLabelFontColor = darkBlue
+let def_detailsVCMotorcycleLabelMinimumScaleFactor: CGFloat = 0.75
+let def_detailsVCMotorcycleLabelPaddingLR: CGFloat = 20.0 + def_detailsVCTopBarInfoIconPaddingR + 20.0
+let def_detailsVCMotorcycleLabelOffset: CGFloat = 5.0
+let def_detailsVCMotorcycleTableViewPaddingLR: CGFloat = 0.0
+let def_detailsVCMotorcycleTableViewPaddingTop: CGFloat = -20.0
+let def_detailsCellCornerRadius: CGFloat = 5.0
+let def_detailsCellMainImagePlaceholder = #imageLiteral(resourceName: "mostRecentPlaceholder")
+let def_detailsCellMainImagePaddingLR: CGFloat = 10.0
+let def_detailsCellMainImagePaddingTB: CGFloat = 10.0
+let def_detailsCellDataIconPaddingTop: CGFloat = 24.0
+let def_detailsCellDataIconPaddingLeft: CGFloat = 20.0
+let def_detailsCellDataIconWidthAndHeight: CGFloat = 50.0
+let def_detailsCellCategoryLabelFontSize: CGFloat = 14.0
+let def_detailsCellCategoryLabelFontColor = darkBlue
+let def_detailsCellCategoryLabelPaddingLeft: CGFloat = 10.0
+let def_detailsCellInformationLabelPaddingLeft: CGFloat = 2.0
+let def_detailsCellInformationLabelPaddingRight: CGFloat = 20.0
+let def_detailsCellCautionIcon = #imageLiteral(resourceName: "cautionIcon")
+let def_detailsCellYearsIcon = #imageLiteral(resourceName: "yearIcon")
+let def_detailsCellTireIcon = #imageLiteral(resourceName: "tireIcon")
+let def_detailsCellSparkPlugIcon = #imageLiteral(resourceName: "sparkPlugIcon")
+let def_detailsCellOilIcon = #imageLiteral(resourceName: "oilIcon")
+let def_detailsCellBrakeFluidIcon = #imageLiteral(resourceName: "brakeFluidIcon")
+let def_detailsCellBackground = #imageLiteral(resourceName: "detailsCellBackground")
+let def_detailsCellBottomSpaceing: CGFloat = 14.0
+let def_detailsCellHeight1: CGFloat = 100.0
+let def_detailsCellHeight2: CGFloat = 110.0
+let def_detailsCellHeight3: CGFloat = 130.0
+let def_detailsCellHeight4: CGFloat = 200.0
+let def_detailsCellSpacing: CGFloat = 0.0
+let def_detailsCellSpacingColor = UIColor.white
+let def_detailsStartLabelHeight: CGFloat = 200.0
+let def_detailsStartLabelFontSize: CGFloat = 28.0
+let def_detailsStartLabelFontColor = darkBlue
+let def_detailsStartLabelPaddingLR: CGFloat = 80.0
+let def_detailsStartLabelOffset: CGFloat = 80.0
+
+// Settings ViewController
+let def_settingsVCBackgroundColor = lightGrey
+let def_settingsVCCloseButtonPaddingTop: CGFloat = 10.0
+let def_settingsVCCloseButtonPaddingLeft: CGFloat = 20.0
+let def_settingsVCCloseButtonWidthHeight: CGFloat = 40.0
+let def_settingsVCCloseIcon = #imageLiteral(resourceName: "closeIcon")
+let def_settingsVCCloseIconPaddingTop: CGFloat = 22.0
+let def_settingsVCCloseIconPaddingLeft: CGFloat = 30.0
+let def_settingsVCCloseIconWidthHeight: CGFloat = 18.0
+let def_settingsVCCellSeperator = #imageLiteral(resourceName: "searchCellSeperator")
+let def_settingsVCCellSeperatorPaddingTop: CGFloat = 12.0
+let def_settingsVCCellSeperatorHeight: CGFloat = 1.0
+let def_settingsVCHeaderHeight: CGFloat = 60.0
+let def_settingsVCHeaderOffset: CGFloat = 6.0
+let def_settingsVCHeaderLabelFontSize: CGFloat = 22.0
+let def_settingsVCHeaderFontColor = darkBlue
+let def_settingsVCHeaderBackgroundColor = middleGrey
+let def_settingsVCFooterBackgroundColor = middleGrey
+let def_settingsVCHeaderPaddingLR: CGFloat = 30.0
+let def_settingsVCCellPaddingLR: CGFloat = 30.0
+let def_settingsVCCellLabelFontSize: CGFloat = 18.0
+let def_settingsVCCellLabelFontColor = darkBlue
+
+// Select Result ViewController
+let def_selectResultVCCellPaddingTop: CGFloat = 0.0
+let def_selectResultVCCellHeight: CGFloat = 65.0
+
+// Search ViewController
+let def_searchVCBackgroundColor = lightGrey
+let def_searchVCCloseIcon = #imageLiteral(resourceName: "closeIcon")
+let def_searchVCCloseIconWidthHeight: CGFloat = 18.0
+let def_searchVCCloseIconPaddingTop: CGFloat = 22.0
+let def_searchVCCloseIconPaddingLeft: CGFloat = 30.0
+let def_searchVCCloseButtonWidthHeight: CGFloat = 40.0
+let def_searchVCCloseButtonPaddingTop: CGFloat = 10.0
+let def_searchVCCloseButtonPaddingLeft: CGFloat = 20.0
+let def_searchVCSeachFieldPaddingTop: CGFloat = 6.0
+let def_searchVCSeachFieldPaddingLR: CGFloat = 30.0
+let def_searchVCSeachFieldHeight: CGFloat = 30.0
+let def_searchVCSeachFieldFontSize: CGFloat = 22.0
+let def_searchVCSeachFieldFontColor = darkBlue
+let def_searchVCSearchCellSeperator = #imageLiteral(resourceName: "searchCellSeperator")
+let def_searchVCSeachCellSeperatorPaddingTop: CGFloat = 12.0
+let def_searchVCSeachCellSeperatorHeight: CGFloat = 1.0
+let def_searchVCClearButtonPaddingTop: CGFloat = 16.0
+let def_searchVCClearButtonPaddingRight: CGFloat = 30.0
+let def_searchVCClearButtonFontSize: CGFloat = 15.0
+let def_searchVCClearButtonFontColor = darkBlue
+let def_searchVCCellPaddingLR: CGFloat = 30.0
+let def_searchVCCellPaddingTop: CGFloat = 0.0
+let def_searchVCCellHeight: CGFloat = 65.0
+let def_searchVCCellMotorcycleLabelFontSize: CGFloat = 18.0
+let def_searchVCCellDateLabelFontSize: CGFloat = 15.0
+let def_searchVCCellLabelsFontColor = darkBlue
+let def_searchVCCellLabelsOffset: CGFloat = 8.0

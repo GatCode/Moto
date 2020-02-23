@@ -1,0 +1,68 @@
+// TabBar
+"tabBarItem1" = "Motorrad";
+"tabBarItem2" = "Erkennen";
+"tabBarItem3" = "Details";
+
+// Persistent Data Error
+"persistentDataFetchingErrorTitle" = "Ladefehler";
+"persistentDataFetchingErrorMessage" = "Die zuletzt gesuchten Motorräder konnten nicht angezeigt werden.";
+"persistentDataSavingErrorTitle" = "Speicherfehler";
+"persistentDataSavingErrorMessage" = "Das ausgewählte Motorrad konnte nicht zu den zuletzt gesuchten hinzugefügt werden.";
+
+// Database Error
+"databaseErrorTitle" = "Ladefehler";
+"databaseErrorMessage" = "Die Motorrad Details konnten nicht geladen werden. Bitte versuchen Sie es später nochmal.";
+
+// TermsAndConditions ViewController
+"welcomeText" = "Herzlich Willkommen";
+"termsAndConditionsText" = "Durch Anklicken der Schaltfläche START stimmen Sie den Datenschutzbedingungen, Nutzungsbedingungen und dem Haftungsausschluss zu, ansonsten wenden Sie sich bitte an den Kundendienst.";
+"termsOfServiceKeyword" = "Nutzungsbedingungen";
+"termsOfServiceUrl" = "https://gatcode.github.io/Moto_Terms_of_Service.html";
+"privacyPolicyKeyword" = "Datenschutzbedingungen";
+"privacyPolicyUrl" = "https://gatcode.github.io/Moto_Privacy_Policy.html";
+"disclaimerKeyword" = "Haftungsausschluss";
+"disclaimerUrl" = "https://gatcode.github.io/Moto_Disclaimer.html";
+"supportKeyword" = "Kundendienst";
+"supportUrl" = "mailto:gatcode@gmail.com";
+"termsAndConditionsParsingErrorTitle" = "Unbekannter Fehler";
+"termsAndConditionsParsingErrorMessage" = "Bitte versuchen Sie es später noch einmal.";
+"webViewLoadingErrorTitle" = "Ladefehler";
+"webViewLoadingErrorMessage" = "Bitte versuchen Sie es später noch einmal.";
+
+// Motorcycle ViewController
+"startMessage" = "Nach welchem Motorrad suchen Sie?";
+"firstTimeSearchButton" = "Suchen";
+"firstTimeDetectButton" = "Erkennen";
+
+// Search ViewController
+"searchFieldPlaceholder" = "Versuche \"BMW K1\"";
+"clearButtonLabel" = "löschen";
+
+// Select Result ViewController
+"selectMotorcycleLabel" = "Wählen Sie ihr Motorrad aus";
+
+// Detect ViewController
+"detectPermissionLabel" = "Moto benötigt Zugriff auf die Kamera um eine Klassifizierung von Motorrädern zu ermöglichen.";
+"detectPermissionButton" = "Kamerazugriff erlauben";
+
+// Details ViewController
+"notChosenYet" = "Es wurde noch kein Motorrad ausgewählt.";
+"cautionLabel" = "Achtung";
+"cautionLabelMessage" = "Datennutzung auf eigene Gefahr";
+"yearsLabel" = "Baujahr(e)";
+"tirePressureLabel" = "Reifendruck";
+"tirePressureFrontLabel" = "Vorne:";
+"tirePressureBackLabel" = "Hinten:";
+"sparkPlugLabel" = "Zündkerze";
+"engineOilLabel" = "Motoröl";
+"engineOilWithFilerLabel" = "mit Filer:";
+"engineOilWithoutFilerLabel" = "ohne Filer:";
+"brakeFluidLabel" = "Bremsfl.";
+
+// Settings ViewController
+"settingsHeader1" = "Informationen";
+"settingsHeader1Item1" = "Nutzungsbedingungen";
+"settingsHeader1Item2" = "Datenschutzbedingungen";
+"settingsHeader1Item3" = "Haftungsausschluss";
+"settingsHeader2" = "Hilfe";
+"settingsHeader2Item1" = "Kundendienst";

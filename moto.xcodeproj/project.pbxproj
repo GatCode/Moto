@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F6D934BD3581BA3F084C022 /* Pods_moto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A695A6411FEA4305968993F /* Pods_moto.framework */; };
+		E40E090021557C7600DE7E9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E40E090221557C7600DE7E9B /* InfoPlist.strings */; };
+		E41413312149A91800238306 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41413302149A91800238306 /* SearchCell.swift */; };
+		E4141334214A665600238306 /* ImageClassificationModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E4141333214A665600238306 /* ImageClassificationModel.mlmodel */; };
+		E4141336214AA88000238306 /* SelectResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4141335214AA88000238306 /* SelectResultViewController.swift */; };
+		E4293751214052950040379D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4293750214052950040379D /* AppDelegate.swift */; };
+		E4293753214052950040379D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4293752214052950040379D /* MainTabBarController.swift */; };
+		E4293758214052960040379D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4293757214052960040379D /* Assets.xcassets */; };
+		E429375B214052960040379D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4293759214052960040379D /* LaunchScreen.storyboard */; };
+		E4293763214055430040379D /* MotorcycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4293762214055430040379D /* MotorcycleViewController.swift */; };
+		E4293765214055620040379D /* DetectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4293764214055620040379D /* DetectViewController.swift */; };
+		E4293767214056740040379D /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4293766214056740040379D /* Definitions.swift */; };
+		E429376921405A5C0040379D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E429376821405A5C0040379D /* DetailsViewController.swift */; };
+		E429376D21406EBA0040379D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E429376F21406EBA0040379D /* Localizable.strings */; };
+		E434B5562146FF700099AF81 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E434B5552146FF700099AF81 /* DetailsCell.swift */; };
+		E434B557214779700099AF81 /* motodb.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = E4C2A2152144245100775038 /* motodb.sqlite3 */; };
+		E438771B215FC7DF00FDA593 /* SettingsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E438771A215FC7DF00FDA593 /* SettingsHeader.swift */; };
+		E438771D215FD01500FDA593 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E438771C215FD01500FDA593 /* SettingsCell.swift */; };
+		E43C454C215EA6E200EB3106 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43C454B215EA6E200EB3106 /* SettingsViewController.swift */; };
+		E459D79021558FDF0088C19C /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E459D78F21558FDF0088C19C /* TermsAndConditionsViewController.swift */; };
+		E459D792215653A90088C19C /* TermsAndConditionsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E459D791215653A80088C19C /* TermsAndConditionsWebViewController.swift */; };
+		E490496F2141C2A800C9DC96 /* MostRecentMotorcycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E490496E2141C2A800C9DC96 /* MostRecentMotorcycleCell.swift */; };
+		E49049712141C2E100C9DC96 /* MostRecentPersistentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49049702141C2E100C9DC96 /* MostRecentPersistentData.swift */; };
+		E4BBE1E02147E2FD00396D00 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBE1DF2147E2FD00396D00 /* SearchViewController.swift */; };
+		E4C2A21B2144246400775038 /* MotorcycleExtentionEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2A2172144246400775038 /* MotorcycleExtentionEntry.swift */; };
+		E4C2A21C2144246400775038 /* MotorcycleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2A2182144246400775038 /* MotorcycleEntry.swift */; };
+		E4C2A21D2144246400775038 /* MotoDBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2A2192144246400775038 /* MotoDBError.swift */; };
+		E4C2A21E2144246400775038 /* MotoDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2A21A2144246400775038 /* MotoDB.swift */; };
+		E4FDCFEF215FEAE70014FCD7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E4FDCFEE215FEAE70014FCD7 /* Settings.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14DA09A1C01E2B2C01E55BEB /* Pods-moto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moto/Pods-moto.debug.xcconfig"; sourceTree = "<group>"; };
+		3A695A6411FEA4305968993F /* Pods_moto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		516E9BA96FAF831637C693DB /* Pods-moto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moto.release.xcconfig"; path = "Pods/Target Support Files/Pods-moto/Pods-moto.release.xcconfig"; sourceTree = "<group>"; };
+		E40E090121557C7600DE7E9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E41413302149A91800238306 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		E4141333214A665600238306 /* ImageClassificationModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassificationModel.mlmodel; sourceTree = "<group>"; };
+		E4141335214AA88000238306 /* SelectResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectResultViewController.swift; sourceTree = "<group>"; };
+		E429374D214052950040379D /* moto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4293750214052950040379D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E4293752214052950040379D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		E4293757214052960040379D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E429375A214052960040379D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E429375C214052960040379D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4293762214055430040379D /* MotorcycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleViewController.swift; sourceTree = "<group>"; };
+		E4293764214055620040379D /* DetectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectViewController.swift; sourceTree = "<group>"; };
+		E4293766214056740040379D /* Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
+		E429376821405A5C0040379D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		E429377021406EBE0040379D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E434B5552146FF700099AF81 /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
+		E438771A215FC7DF00FDA593 /* SettingsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeader.swift; sourceTree = "<group>"; };
+		E438771C215FD01500FDA593 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		E43C454B215EA6E200EB3106 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E459D78F21558FDF0088C19C /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		E459D791215653A80088C19C /* TermsAndConditionsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsWebViewController.swift; sourceTree = "<group>"; };
+		E490496E2141C2A800C9DC96 /* MostRecentMotorcycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRecentMotorcycleCell.swift; sourceTree = "<group>"; };
+		E49049702141C2E100C9DC96 /* MostRecentPersistentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRecentPersistentData.swift; sourceTree = "<group>"; };
+		E4BBE1DF2147E2FD00396D00 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E4C2A2152144245100775038 /* motodb.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = motodb.sqlite3; sourceTree = "<group>"; };
+		E4C2A2172144246400775038 /* MotorcycleExtentionEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleExtentionEntry.swift; sourceTree = "<group>"; };
+		E4C2A2182144246400775038 /* MotorcycleEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotorcycleEntry.swift; sourceTree = "<group>"; };
+		E4C2A2192144246400775038 /* MotoDBError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotoDBError.swift; sourceTree = "<group>"; };
+		E4C2A21A2144246400775038 /* MotoDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotoDB.swift; sourceTree = "<group>"; };
+		E4FDCFEE215FEAE70014FCD7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E429374A214052950040379D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6D934BD3581BA3F084C022 /* Pods_moto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6B7D2345C193F4E56F3D5E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A695A6411FEA4305968993F /* Pods_moto.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E41413322149A92000238306 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E4BBE1DF2147E2FD00396D00 /* SearchViewController.swift */,
+				E41413302149A91800238306 /* SearchCell.swift */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		E4293744214052950040379D = {
+			isa = PBXGroup;
+			children = (
+				E429374F214052950040379D /* moto */,
+				E429374E214052950040379D /* Products */,
+				EF7CA34873C01A8756621C64 /* Pods */,
+				C6B7D2345C193F4E56F3D5E8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E429374E214052950040379D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E429374D214052950040379D /* moto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E429374F214052950040379D /* moto */ = {
+			isa = PBXGroup;
+			children = (
+				E429376F21406EBA0040379D /* Localizable.strings */,
+				E4293766214056740040379D /* Definitions.swift */,
+				E4293752214052950040379D /* MainTabBarController.swift */,
+				E4ABD1E321576A3A0067191F /* TermsAndConditionsViewController */,
+				E4C2A212214404CA00775038 /* MotorcycleViewController */,
+				E4C2A213214404E200775038 /* DetectViewController */,
+				E4C2A214214404F000775038 /* DetailsViewController */,
+				E41413322149A92000238306 /* SearchViewController */,
+				E4E73737215EA80300F0DF11 /* SettingsViewController */,
+				E4C2A21F2144247500775038 /* Database */,
+				E4320F6C2154EFCC005C6DC8 /* Supporting Files */,
+				E4FDCFEE215FEAE70014FCD7 /* Settings.bundle */,
+			);
+			path = moto;
+			sourceTree = "<group>";
+		};
+		E4320F6C2154EFCC005C6DC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4293750214052950040379D /* AppDelegate.swift */,
+				E4293757214052960040379D /* Assets.xcassets */,
+				E4293759214052960040379D /* LaunchScreen.storyboard */,
+				E429375C214052960040379D /* Info.plist */,
+				E40E090221557C7600DE7E9B /* InfoPlist.strings */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4ABD1E321576A3A0067191F /* TermsAndConditionsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E459D78F21558FDF0088C19C /* TermsAndConditionsViewController.swift */,
+				E459D791215653A80088C19C /* TermsAndConditionsWebViewController.swift */,
+			);
+			path = TermsAndConditionsViewController;
+			sourceTree = "<group>";
+		};
+		E4C2A212214404CA00775038 /* MotorcycleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E4293762214055430040379D /* MotorcycleViewController.swift */,
+				E490496E2141C2A800C9DC96 /* MostRecentMotorcycleCell.swift */,
+				E49049702141C2E100C9DC96 /* MostRecentPersistentData.swift */,
+			);
+			path = MotorcycleViewController;
+			sourceTree = "<group>";
+		};
+		E4C2A213214404E200775038 /* DetectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E4293764214055620040379D /* DetectViewController.swift */,
+				E4141335214AA88000238306 /* SelectResultViewController.swift */,
+				E4141333214A665600238306 /* ImageClassificationModel.mlmodel */,
+			);
+			path = DetectViewController;
+			sourceTree = "<group>";
+		};
+		E4C2A214214404F000775038 /* DetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E429376821405A5C0040379D /* DetailsViewController.swift */,
+				E434B5552146FF700099AF81 /* DetailsCell.swift */,
+			);
+			path = DetailsViewController;
+			sourceTree = "<group>";
+		};
+		E4C2A2162144246400775038 /* Data Structure */ = {
+			isa = PBXGroup;
+			children = (
+				E4C2A2172144246400775038 /* MotorcycleExtentionEntry.swift */,
+				E4C2A2182144246400775038 /* MotorcycleEntry.swift */,
+			);
+			path = "Data Structure";
+			sourceTree = "<group>";
+		};
+		E4C2A21F2144247500775038 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				E4C2A2152144245100775038 /* motodb.sqlite3 */,
+				E4C2A21A2144246400775038 /* MotoDB.swift */,
+				E4C2A2192144246400775038 /* MotoDBError.swift */,
+				E4C2A2162144246400775038 /* Data Structure */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		E4E73737215EA80300F0DF11 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E43C454B215EA6E200EB3106 /* SettingsViewController.swift */,
+				E438771A215FC7DF00FDA593 /* SettingsHeader.swift */,
+				E438771C215FD01500FDA593 /* SettingsCell.swift */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		EF7CA34873C01A8756621C64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14DA09A1C01E2B2C01E55BEB /* Pods-moto.debug.xcconfig */,
+				516E9BA96FAF831637C693DB /* Pods-moto.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E429374C214052950040379D /* moto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E429375F214052960040379D /* Build configuration list for PBXNativeTarget "moto" */;
+			buildPhases = (
+				C984C32C92B27F7656A331E7 /* [CP] Check Pods Manifest.lock */,
+				E4293749214052950040379D /* Sources */,
+				E429374A214052950040379D /* Frameworks */,
+				E429374B214052950040379D /* Resources */,
+				92292706F36CDE1CEDAB0726 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = moto;
+			productName = moto;
+			productReference = E429374D214052950040379D /* moto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4293745214052950040379D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "GatCode";
+				TargetAttributes = {
+					E429374C214052950040379D = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1130;
+					};
+				};
+			};
+			buildConfigurationList = E4293748214052950040379D /* Build configuration list for PBXProject "moto" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4293744214052950040379D;
+			productRefGroup = E429374E214052950040379D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E429374C214052950040379D /* moto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E429374B214052950040379D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E434B557214779700099AF81 /* motodb.sqlite3 in Resources */,
+				E429375B214052960040379D /* LaunchScreen.storyboard in Resources */,
+				E429376D21406EBA0040379D /* Localizable.strings in Resources */,
+				E4293758214052960040379D /* Assets.xcassets in Resources */,
+				E4FDCFEF215FEAE70014FCD7 /* Settings.bundle in Resources */,
+				E40E090021557C7600DE7E9B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92292706F36CDE1CEDAB0726 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moto/Pods-moto-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moto/Pods-moto-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-moto/Pods-moto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C984C32C92B27F7656A331E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4293749214052950040379D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4141334214A665600238306 /* ImageClassificationModel.mlmodel in Sources */,
+				E4C2A21E2144246400775038 /* MotoDB.swift in Sources */,
+				E4141336214AA88000238306 /* SelectResultViewController.swift in Sources */,
+				E41413312149A91800238306 /* SearchCell.swift in Sources */,
+				E49049712141C2E100C9DC96 /* MostRecentPersistentData.swift in Sources */,
+				E434B5562146FF700099AF81 /* DetailsCell.swift in Sources */,
+				E459D792215653A90088C19C /* TermsAndConditionsWebViewController.swift in Sources */,
+				E4C2A21C2144246400775038 /* MotorcycleEntry.swift in Sources */,
+				E4293753214052950040379D /* MainTabBarController.swift in Sources */,
+				E4C2A21D2144246400775038 /* MotoDBError.swift in Sources */,
+				E438771D215FD01500FDA593 /* SettingsCell.swift in Sources */,
+				E4293765214055620040379D /* DetectViewController.swift in Sources */,
+				E438771B215FC7DF00FDA593 /* SettingsHeader.swift in Sources */,
+				E4293763214055430040379D /* MotorcycleViewController.swift in Sources */,
+				E4BBE1E02147E2FD00396D00 /* SearchViewController.swift in Sources */,
+				E4293767214056740040379D /* Definitions.swift in Sources */,
+				E43C454C215EA6E200EB3106 /* SettingsViewController.swift in Sources */,
+				E4C2A21B2144246400775038 /* MotorcycleExtentionEntry.swift in Sources */,
+				E459D79021558FDF0088C19C /* TermsAndConditionsViewController.swift in Sources */,
+				E4293751214052950040379D /* AppDelegate.swift in Sources */,
+				E429376921405A5C0040379D /* DetailsViewController.swift in Sources */,
+				E490496F2141C2A800C9DC96 /* MostRecentMotorcycleCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E40E090221557C7600DE7E9B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E40E090121557C7600DE7E9B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E4293759214052960040379D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E429375A214052960040379D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E429376F21406EBA0040379D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E429377021406EBE0040379D /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E429375D214052960040379D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E429375E214052960040379D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4293760214052960040379D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DA09A1C01E2B2C01E55BEB /* Pods-moto.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6M968VJ8Q;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "moto/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GatCode.moto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E4293761214052960040379D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 516E9BA96FAF831637C693DB /* Pods-moto.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K6M968VJ8Q;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "moto/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GatCode.moto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4293748214052950040379D /* Build configuration list for PBXProject "moto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E429375D214052960040379D /* Debug */,
+				E429375E214052960040379D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E429375F214052960040379D /* Build configuration list for PBXNativeTarget "moto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4293760214052960040379D /* Debug */,
+				E4293761214052960040379D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4293745214052950040379D /* Project object */;
+}
